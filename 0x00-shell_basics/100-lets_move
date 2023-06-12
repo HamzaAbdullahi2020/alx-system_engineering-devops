@@ -1,5 +1,2 @@
 #!/bin/bash
-[ ! -d "/tmp/u" ] && mkdir -p "/tmp/u"
-mv [A-Z]* /tmp/u/ 2>/dev/null
-
-
+[ ! -d "/tmp/u" ] && mkdir -p "/tmp/u"; for file in [A-Z]*; do [ -f "$file" ] && mv "$file" "/tmp/u/"; done
